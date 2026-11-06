@@ -1,0 +1,860 @@
+/* =================================
+   1. GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #2869b2;
+    --dark-blue: #183d70;
+    --purple: #7554b8;
+    --pink: #f3d9e8;
+    --light-blue: #eaf3ff;
+    --green: #dff3e6;
+    --orange: #fff0dc;
+    --dark: #263348;
+    --text: #536174;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--dark);
+    background-color: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+html {
+    scroll-padding-top: 85px;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =================================
+   2. NAVIGATION BAR
+================================= */
+
+header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--blue);
+}
+
+.logo-icon {
+    font-size: 27px;
+    margin-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--purple);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    min-height: 570px;
+    padding: 80px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(
+        120deg,
+        #eaf3ff,
+        #f5eafa,
+        #fff2e4
+    );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-heading {
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.2;
+    margin: 20px 0;
+    color: var(--dark-blue);
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+.hero-content p {
+    color: var(--text);
+    font-size: 17px;
+    max-width: 580px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: var(--blue);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--dark-blue);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 2px solid var(--purple);
+    color: var(--purple);
+}
+
+.secondary-btn:hover {
+    background: var(--purple);
+    color: white;
+}
+
+.hero-illustration {
+    min-width: 280px;
+    text-align: center;
+}
+
+.illustration-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c9dcff, #ead5f8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    box-shadow: 0 15px 35px rgba(70, 70, 140, 0.13);
+}
+
+.illustration-circle span {
+    font-size: 65px;
+    width: 45%;
+}
+
+.hero-illustration h3 {
+    color: var(--purple);
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.hero-illustration p {
+    color: var(--text);
+}
+
+
+/* =================================
+   4. MESSAGE STRIP
+================================= */
+
+.message-strip {
+    background: linear-gradient(90deg, #6750a4, #3285bc);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.message-strip h2 {
+    font-size: 22px;
+}
+
+
+/* =================================
+   5. GENERAL SECTIONS
+================================= */
+
+.section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 50px;
+}
+
+.section-heading span {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: var(--dark-blue);
+    margin: 12px 0;
+    line-height: 1.3;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 16px;
+}
+
+
+/* =================================
+   6. ABOUT CARDS
+================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    padding: 35px 25px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.about-card:hover,
+.disability-card:hover,
+.technology-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blue-card {
+    background: #e5f0ff;
+}
+
+.pink-card {
+    background: #fce9f2;
+}
+
+.green-card {
+    background: #e3f5e9;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.about-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+}
+
+.about-card p {
+    color: var(--text);
+}
+
+
+/* =================================
+   7. TYPES OF DISABILITIES
+================================= */
+
+.types-section {
+    background: #f7f9ff;
+}
+
+.disability-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.disability-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 16px;
+    border-bottom: 4px solid #9b85dc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+}
+
+.disability-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.disability-card h3 {
+    font-size: 18px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.disability-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.disability-card .example {
+    background: #f1effb;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   8. MYTHS AND FACTS
+================================= */
+
+.myths-section {
+    background: linear-gradient(135deg, #fff6ee, #f8f1ff);
+}
+
+.myth-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.myth-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.myth-label {
+    display: inline-block;
+    background: #ffe5e0;
+    color: #c45c4e;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.myth-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+.fact {
+    color: var(--text);
+    background: #e9f6ed;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.fact strong {
+    color: #25804c;
+}
+
+
+/* =================================
+   9. CHALLENGES
+================================= */
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.challenge-item {
+    background: #f2f6fc;
+    border-radius: 15px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.challenge-item:hover {
+    background: #e4eafa;
+    transform: translateY(-5px);
+}
+
+.challenge-item span {
+    font-size: 42px;
+}
+
+.challenge-item h3 {
+    margin: 12px 0;
+    color: var(--dark-blue);
+    font-size: 18px;
+}
+
+.challenge-item p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+
+/* =================================
+   10. INCLUSIVE EDUCATION
+================================= */
+
+.inclusion-section {
+    background: #f2f8ff;
+}
+
+.inclusion-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.inclusion-box {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.inclusion-box span {
+    font-size: 45px;
+}
+
+.inclusion-box h3 {
+    color: var(--blue);
+    margin: 12px 0;
+}
+
+.inclusion-box p {
+    color: var(--text);
+}
+
+.quote-box {
+    margin-top: 55px;
+    padding: 45px 25px;
+    background: linear-gradient(120deg, #7156b5, #3985bb);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.quote-box h2 {
+    font-size: 27px;
+}
+
+.quote-box p {
+    margin-top: 12px;
+}
+
+
+/* =================================
+   11. ASSISTIVE TECHNOLOGY
+================================= */
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.technology-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+    text-align: center;
+    background: #f7f4ff;
+    transition: 0.3s;
+}
+
+.technology-card:nth-child(even) {
+    background: #edf7ff;
+}
+
+.technology-card span {
+    font-size: 43px;
+}
+
+.technology-card h3 {
+    margin: 12px 0;
+    color: var(--purple);
+}
+
+.technology-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+
+/* =================================
+   12. SUPPORT SECTION
+================================= */
+
+.support-section {
+    background: #fff8f0;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.support-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.support-icon {
+    font-size: 42px;
+}
+
+.support-card h3 {
+    color: var(--dark-blue);
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.support-card ul {
+    padding-left: 20px;
+    color: var(--text);
+}
+
+.support-card li {
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   13. CALL TO ACTION
+================================= */
+
+.call-to-action {
+    text-align: center;
+    padding: 75px 10%;
+    color: white;
+    background: linear-gradient(120deg, #55459c, #287fb4);
+}
+
+.call-to-action > span {
+    font-size: 50px;
+}
+
+.call-to-action h2 {
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.call-to-action p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.white-btn {
+    background: white;
+    color: var(--purple);
+}
+
+.white-btn:hover {
+    background: #f0e8ff;
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   14. REFERENCES
+================================= */
+
+.references-section {
+    background: #f8f9fc;
+}
+
+.reference-list {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    gap: 18px;
+}
+
+.reference-item {
+    background: white;
+    padding: 23px;
+    border-radius: 13px;
+    border-left: 4px solid var(--purple);
+}
+
+.reference-item h3 {
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.reference-item p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.reference-item a {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.reference-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   15. FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    background: #1d3557;
+}
+
+footer h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+
+/* =================================
+   16. BACK TO TOP BUTTON
+================================= */
+
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop:hover {
+    background: var(--blue);
+}
+
+
+/* =================================
+   17. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .disability-grid,
+    .technology-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .challenge-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .about-grid,
+    .inclusion-content,
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .myth-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .illustration-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .illustration-circle span {
+        font-size: 48px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .disability-grid,
+    .technology-grid,
+    .challenge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-box h2 {
+        font-size: 22px;
+    }
+
+    .call-to-action h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
